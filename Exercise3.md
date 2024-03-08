@@ -1,6 +1,6 @@
 # Exercise 3
 
-## 1.Input a list of data, separated by commas, and find the average, maximum, and minimum values of this set of data, and sort them in order from smallest to largest
+## 1.Input a list of data, separated by commas, and find the average, maximum, and minimum values of this list of data, and sort them in order from smallest to largest
 
 ## 2.Input a list of non-empty positive integers, sorted by the number of times that number is repeated in the list, from highest to lowest.
 
