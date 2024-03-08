@@ -6,6 +6,6 @@
 
 ## Q3.  Use the while loop to create a list of 10 odd numbers, if the input is not an odd number to give a message and can continue to enter, and then calculate the sum and average of the list
 
-##   Q4.  Input 5 integers into list list1, output the subscripts and values, then form a new list list2 from the elements of list list1 that are greater than the average value, output the average value and list list2. solve the problem using the list derivatives
+##   Q4.  Input 5 integers into list list1, output the subscripts and values, then form a new list list2 from the elements of list list1 that are greater than the average value, output the average value and list list2. solve the problem using the list comprehension
 
-## Q5.  sGiven the list [1, 9, 8, 7, 6, 5, 13, 3, 2, 1], delete all odd numbers in it before outputting it. Solve the problem using list derivatives.
+## Q5.  sGiven the list [1, 9, 8, 7, 6, 5, 13, 3, 2, 1], delete all odd numbers in it before outputting it. Solve the problem using list comprehension.
