@@ -1,7 +1,9 @@
-# PythonPPTs
+# Python Honors Course
 
-<<<<<<< HEAD
-# Here will the Exercise for this semester for Python
-=======
-### Exercise will upload here
->>>>>>> c966e96919235bf02247f4bd3d428f5d6aa837c9
+
+
+### Homework Questions and Answers will upload here:  [Homework][1]
+
+### Tutorial will upload here:  [Tutorial][2]
+[1]:https://github.com/madfrov/PythonPPTs/tree/main/Homework
+[2]:https://github.com/madfrov/PythonPPTs/tree/main/Tutorial
