@@ -42,3 +42,115 @@ for i in range(row):
 print(a)
 ```
 
+## 2.4 How can I specified the rows and cols for a 0 martrix
+
+```
+input_rowsandcols = input()
+dimensions=[int(x) for x in input_str.split(',')]
+rowNum=dimensions[0]
+colNum=dimensions[1]
+multilist = []
+for row in range(rowNum):
+    sublist = []
+    for col in range(colNum):
+        sublist.append(0)
+    multilist.append(sublist)
+print(multilist)
+```
+
+Q1:
+
+```
+def find_max_element_index(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+    max_value = float('-inf')  # 初始化最大值为负无穷
+    max_index = (0, 0)  # 初始化最大值的索引为 (0, 0)
+
+    for i in range(rows):
+        for j in range(cols):
+            if matrix[i][j] > max_value:
+                max_value = matrix[i][j]
+                max_index = (i, j)
+
+    return max_index
+matrix = [
+    [3, 2, 5],
+    [1, 6, 4],
+    [7, 8, 9]
+]
+
+max_index = find_max_element_index(matrix)
+print("最大元素的索引位置：", max_index)
+```
+
+Q2:
+
+```
+n = int(input("Enter an odd number: "))
+
+# Create the empty two-dimensional array
+arr = [["." for _ in range(n)] for _ in range(n)]
+
+# Fill the middle row with "*"
+mid_row = n // 2
+arr[mid_row] = ["*" for _ in range(n)]
+
+# Fill the middle column with "*"
+mid_col = n // 2
+for row in range(n):
+    arr[row][mid_col] = "*"
+
+# Fill the diagonals with "*"
+for i in range(n):
+    arr[i][i] = "*"
+    arr[i][n - i - 1] = "*"
+
+# Print the array
+for row in arr:
+    print(" ".join(row))
+```
+
+Q3:
+
+```
+n = int(input("Enter the number of rows (n): "))
+m = int(input("Enter the number of columns (m): "))
+
+# Create the empty two-dimensional array
+arr = []
+
+for i in range(n):
+    row = []
+    for j in range(m):
+        if (i + j) % 2 == 0:
+            row.append(".")
+        else:
+            row.append("*")
+    arr.append(row)
+
+# Print the array
+for row in arr:
+    print(" ".join(row))
+```
+
+Q4
+
+```
+n = int(input("Enter an integer (n): "))
+
+# Create the empty two-dimensional array
+arr = [[0] * n for _ in range(n)]
+
+# Fill the diagonals with the corresponding values
+for i in range(n):
+    for j in range(n):
+        arr[i][j] = abs(i - j)
+
+# Print the array
+for row in arr:
+    for element in row:
+        print(element, end=" ")
+    print()
+```
+
