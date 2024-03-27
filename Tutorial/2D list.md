@@ -84,6 +84,33 @@ max_index = find_max_element_index(matrix)
 print("最大元素的索引位置：", max_index)
 ```
 
+Q1. Answer by G2-5 Matthew
+
+```
+dx = 0
+dy = 0
+mp = []
+mx = 0
+n = int(input())
+m = int(input())
+for i in range(n) :
+    row = input().split(" ")
+    for j in range(m) :
+        row[j] = int(row[j])
+        
+    mp.append(row)
+for i in range(n) :
+    for j in range(m) :
+        if mp[i][j] > mx :
+            mx = mp[i][j]
+            dx = i
+            dy = j
+print(dx, " ",dy)
+    
+```
+
+
+
 Q2:
 
 ```
