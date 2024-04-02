@@ -152,35 +152,40 @@ print(average_overall)
 ```
 
 ```
-n = int(input("Enter the number of rows: "))
-total_sum = 0
-total_count = 0
+row=int(input('pls input row'))
+col=int(input('pls input col'))
+list1=[]
+sum=0
+for i in range(row):
+    a=input().split()
+    a2=map(int,a)
+    a3=list(a2)
+    list1.append(a3)
 
-for _ in range(n):
-    row = input("Enter the numbers in the row, separated by spaces: ").split()
-    
-    for j in range(len(row)):
-        total_sum += int(row[j])
-        total_count += 1
-
-average = total_sum / total_count
-print("Average:", average)
+for i in range(row):
+    for j in range(col):
+        sum+=list1[i][j]
+print(sum)
 ```
 
 ```
-n = int(input("Enter the number of rows: "))
+row = int(input('Please input the number of rows: '))
+col = int(input('Please input the number of columns: '))
+
+list1 = []
 total_sum = 0
-total_count = 0
+count=0
+for i in range(row):
+    a = input().split()
+    a2 = map(int, a)
+    a3 = list(a2)
+    list1.append(a3)
 
-for _ in range(n):
-    row = input("Enter the numbers in the row, separated by spaces: ").split()
-    
-    for num in row:
-        total_sum += int(num)
-        total_count += 1
-
-average = total_sum / total_count
-print("Average:", average)
+for sublist in list1:
+    for element in sublist:
+        total_sum += element
+        count+=1
+print(total_sum/count)
 ```
 
 ```
