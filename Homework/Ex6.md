@@ -49,27 +49,26 @@ print(mth_character)  # Output: d
 #By G2 Justin
 from collections import Counter
 
-print("times=?")
-time = int(input())
+str = "gbgkkdehh"
 
-print("sequence=?")
-sequence = int(input())
+print("times = ?")
+times = int(input())
 
-sequence1 = 0
-a = list("gbgkkdehh")
-b = Counter(a)
+print("position = ?")
+position = int(input())
 
+counter = Counter(str)
 result = None
-for i in b:
-    if b[i] == time:
-        sequence1 += 1
-        if sequence1 == sequence:
-            result = i
+count = 0
+
+for char in counter:
+    if counter[char] == times:
+        count += 1
+        if count ==position:
+            result = char
             break
 
-print("Result:", result)
-print("Time:", time)
-print("Sequence:", sequence1)   
+print("Result:", result) 
 ```
 
 
