@@ -108,6 +108,24 @@ public class SequentialSearch {
 }
 ```
 
+```
+def findMyself(students, name):
+    for i in range(len(students)):
+        if students[i] == name:
+            return i + 1
+    return -1
+
+com3 = ["arraon", "andy", "sally"，"helen","david","james","ryan an","ryan wu"]
+target = "arraon"
+result = findMyself(com3, target)
+if result == -1:
+    print("We don't have this guy.")
+else:
+    print("The target is in number", result, "in our class.")
+```
+
+
+
 ## What kinds of question are suitable for sequential search?
 
 For sequential search, it is one of the simplest and least tricky ways to lookup. Sequential sorting is more suitable for unordered sets than ordered ones. Sequential sorting is suitable for small datasets, because for computers, the amount of computation in 1s is about 8 times 10, and due to various competitions, the time limit is usually within 1s, so for a one-dimensional sequential search, the amount of data is 8 times 10, that is, the amount of data is 100 million, and more than this amount of data can not be processed in a sequential search!
@@ -162,6 +180,8 @@ else:
 
 #### The time complexity of binary search is O(log n), where n is the length of the list. Compared to sequential search, binary lookup is more efficient in large ordered lists.
 
+## Question:Given an array of integers nums, find one of the peak elements and return its index. A peak element is an element whose value is strictly greater than the values of its left and right neighbors. There may be more than one peak in the array; simply return the index of any one peak. Also, assume that nums[-1] = nums[n] = -∞, where n is the length of the array.
+
 The time complexity of the binary search algorithm is calculated by the number of iterations. In each iteration, the search range is reduced by half until the target element is found or the search range is empty.
 
 Suppose the length of the list is n. After the first iteration, the search range is reduced to n/2. After the second iteration, the search range is reduced again to n/4, and so on, with each iteration, the search range is reduced by half until the search range is empty or the target element is found.
@@ -189,6 +209,34 @@ k = log2(n)
 Therefore, from the above calculations, it can be concluded that the number of iterations k is approximately equal to log2(n) in the bisection search algorithm.
 
 Therefore, the time complexity of the bisection finding algorithm is O(log n), where n is the length of the list. This shows that the number of iterations required for bisection lookup grows logarithmically as the length of the list increases, making the algorithm highly efficient in large ordered lists.
+
+```
+def find_peak_element(nums):
+    left = 0
+    right = len(nums) - 1
+
+    while left < right:
+        mid = (left + right) // 2
+
+        if nums[mid] > nums[mid + 1]:
+            right = mid
+        else:
+            left = mid + 1
+
+    return left
+
+# 示例数据
+nums = [1, 2, 1, 3, 5, 6, 4]
+
+# 执行查找峰值元素
+peak_index = find_peak_element(nums)
+
+# 输出结果
+print("峰值元素的索引位置为:", peak_index)
+print("峰值元素的值为:", nums[peak_index])
+```
+
+
 
 ## Sorting Algorithms
 
