@@ -124,9 +124,7 @@ else:
     print("The target is in number", result, "in our class.")
 ```
 
-
-
-## What kinds of question are suitable for sequential search?
+### What kinds of question are suitable for sequential search?
 
 For sequential search, it is one of the simplest and least tricky ways to lookup. Sequential sorting is more suitable for unordered sets than ordered ones. Sequential sorting is suitable for small datasets, because for computers, the amount of computation in 1s is about 8 times 10, and due to various competitions, the time limit is usually within 1s, so for a one-dimensional sequential search, the amount of data is 8 times 10, that is, the amount of data is 100 million, and more than this amount of data can not be processed in a sequential search!
 
@@ -176,11 +174,60 @@ else:
     print("目标元素", target, "不存在于列表中")
 ```
 
+```
+import java.util.Scanner;
+
+public class BinarySearch {
+    public static int binarySearch(int[] arr, int target) {
+        int low = 0;
+        int high = arr.length - 1;
+        
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            
+            if (arr[mid] == target) {
+                return mid;  // 找到目标元素，返回索引位置
+            } else if (arr[mid] < target) {
+                low = mid + 1;  // 目标元素在右侧，缩小搜索范围到右半部分
+            } else {
+                high = mid - 1;  // 目标元素在左侧，缩小搜索范围到左半部分
+            }
+        }
+        
+        return -1;  // 没有找到目标元素，返回 -1
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("请输入整数数组，以空格分隔: ");
+        String[] inputArr = scanner.nextLine().split(" ");
+        int[] arr = new int[inputArr.length];
+        for (int i = 0; i < inputArr.length; i++) {
+            arr[i] = Integer.parseInt(inputArr[i]);
+        }
+
+        System.out.print("请输入目标元素: ");
+        int target = scanner.nextInt();
+
+        int result = binarySearch(arr, target);
+
+        if (result != -1) {
+            System.out.println("目标元素 " + target + " 在数组中的索引位置为 " + result);
+        } else {
+            System.out.println("目标元素 " + target + " 不存在于数组中");
+        }
+    }
+}
+```
+
+
+
 #### Note that the binary lookup algorithm requires that the list being searched must be ordered. If the list is unordered, you need to sort the list before applying the binary lookup algorithm.
 
 #### The time complexity of binary search is O(log n), where n is the length of the list. Compared to sequential search, binary lookup is more efficient in large ordered lists.
 
-## Question:Given an array of integers nums, find one of the peak elements and return its index. A peak element is an element whose value is strictly greater than the values of its left and right neighbors. There may be more than one peak in the array; simply return the index of any one peak. Also, assume that nums[-1] = nums[n] = -∞, where n is the length of the array.
+## Question: Given an array of integers nums, find one of the peak elements and return its index. A peak element is an element whose value is strictly greater than the values of its left and right neighbors. There may be more than one peak in the array; simply return the index of any one peak. 
 
 The time complexity of the binary search algorithm is calculated by the number of iterations. In each iteration, the search range is reduced by half until the target element is found or the search range is empty.
 
@@ -250,7 +297,7 @@ print("峰值元素的值为:", nums[peak_index])
 
 - #### Repeat the second step until all elements are sorted.
 
-https://![sss](https://github.com/madfrov/PythonPPTs/blob/main/img/Selection_sort.gif)github.com/madfrov/PythonPPTs/blob/main/img/Selection_sort.gif
+![sss](https://github.com/madfrov/PythonPPTs/blob/main/img/Selection_sort.gif)
 
 ```\
 def selection_sort(arr):
