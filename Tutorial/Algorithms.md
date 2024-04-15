@@ -284,13 +284,19 @@ def find_peak_element(nums):
 
         if nums[mid] > nums[mid + 1]:
             right = mid
+        elif nums[mid] > nums[mid - 1]:
+            left = mid
         else:
-            left = mid + 1
+            # 当前元素无法确定峰值位置，需要进一步判断
+            if nums[left] > nums[right]:
+                right -= 1
+            else:
+                left += 1
 
     return left
 
 # 示例数据
-nums = [1, 2, 1, 3, 5, 6, 4]
+nums = [1, 2, 3, 3, 5, 6, 4]
 
 # 执行查找峰值元素
 peak_index = find_peak_element(nums)
