@@ -105,9 +105,19 @@ For sequential search, it is one of the simplest and least tricky ways to lookup
 
 #### Binary Search is an efficient search algorithm that requires the list being searched to be ordered. The algorithm does this by comparing the target value to the middle element of the list, and depending on the result of the comparison, narrows the search range by half until either the target value is found or the search range is empty.
 
-Example: Find element 27 in the set {10,25,26,27,55,87,123,150,160}.
+Example: Find element 27 in the list [10,25,26,27,55,87,123,150,160].
 
 First, calculate the centroid based on the ordinal numbers of the ends, i.e., mid = (start + end) / 2 ; mid = (0+9) / 2 = 4, the element that is in the set and has ordinal number 4 is 55 (counting from 0), compare this with 27, which is 27 < 55, which means that 27 is only likely to be found to the left of 55 (since the set is ordered)
+
+![b](https://github.com/madfrov/PythonPPTs/blob/main/img/b1.png)
+
+According to mid = (start + end) / 2; at this point end becomes the original mid, mid = (0 + 4)/2 = 2. Taking out the element in the set with the ordinal number 2, i.e., 26, it is found that 27 > 26, which implies that the element could only be to the right of 26.
+
+![b](https://github.com/madfrov/PythonPPTs/blob/main/img/b2.png)
+
+start is updated to mid, at this time the start is 2, end is 4, according to mid = (start + end)/2; calculated that mid is 3, take out the collection of elements in the serial number of 3, is 27. is the element we want to find, exit the search.
+
+![b](https://github.com/madfrov/PythonPPTs/blob/main/img/b3.png)
 
 ```
 def binary_search(arr, target):
