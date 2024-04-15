@@ -20,7 +20,11 @@ First, element 7 is compared to the first element 10 in the list and found not t
 
 Element 7 continues to be compared with the second element 5 and is found to be also not our target
 
+![b](https://github.com/madfrov/PythonPPTs/blob/main/img/s2.png)
+
 Element 7 continues to move backward, comparing it to the third element in the list, and is found to be the element we are looking for.
+
+![b](https://github.com/madfrov/PythonPPTs/blob/main/img/s3.png)
 
 After finding, the logical position of the output element in the list is 3, because the array starts from 0, so the real position of 7 is 2, the logical position needs to be added 1.
 
