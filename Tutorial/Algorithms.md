@@ -231,6 +231,14 @@ public class BinarySearch {
 
 ### Q2: Given an array of integers nums, find one of the peak elements and return its index. A peak element is an element whose value is strictly greater than the values of its left and right neighbors. There may be more than one peak in the array; simply return the index of any one peak. 
 
+```
+nums[i-1] < nums[i] > nums[i+1], the current position i is the value to look for
+nums[i-1] < nums[i] < nums[i+1], the position is in the climbing zone, meaning there must be a maximum value to his right
+nums[i-1] > nums[i] > nums[i+1], the position is in the downhill area, means there must be a maximum value in his left side
+```
+
+
+
 The time complexity of the binary search algorithm is calculated by the number of iterations. In each iteration, the search range is reduced by half until the target element is found or the search range is empty.
 
 Suppose the length of the list is n. After the first iteration, the search range is reduced to n/2. After the second iteration, the search range is reduced again to n/4, and so on, with each iteration, the search range is reduced by half until the search range is empty or the target element is found.
