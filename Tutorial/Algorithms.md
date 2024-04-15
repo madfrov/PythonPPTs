@@ -235,6 +235,13 @@ public class BinarySearch {
 nums[i-1] < nums[i] > nums[i+1], the current position i is the value to look for
 nums[i-1] < nums[i] < nums[i+1], the position is in the climbing zone, meaning there must be a maximum value to his right
 nums[i-1] > nums[i] > nums[i+1], the position is in the downhill area, means there must be a maximum value in his left side
+
+Since we can determine which of the two sides of the current element will have the maximum value, we can use dichotomization to solve for it:
+We still take the middle value of mid, the two sides of the value of left and right
+
+num[mid] is in a climbing state, update left.
+num[mid] is going downhill, update right.
+Until we reach the peak.
 ```
 
 
@@ -292,6 +299,36 @@ peak_index = find_peak_element(nums)
 print("峰值元素的索引位置为:", peak_index)
 print("峰值元素的值为:", nums[peak_index])
 ```
+
+```
+def findPeakElements(nums):
+    peaks = []
+    left = 0
+    right = len(nums) - 1
+
+    while left <= right:
+        mid = left + (right - left) // 2
+
+        if (mid == 0 or nums[mid] > nums[mid - 1]) and (mid == len(nums) - 1 or nums[mid] > nums[mid + 1]):
+            # 当前位置是峰值元素
+            peaks.append(mid)
+            left = mid + 1
+        elif mid < len(nums) - 1 and nums[mid] < nums[mid + 1]:
+            # 峰值在右侧
+            left = mid + 1
+        else:
+            # 峰值在左侧
+            right = mid - 1
+
+    return peaks
+
+# 示例 2
+nums2 = [1, 2, 1, 3, 1, 5, 4]
+peaks2 = findPeakElements(nums2)
+print("峰值元素的索引为:", peaks2)
+```
+
+
 
 ### Summary
 
