@@ -227,7 +227,9 @@ public class BinarySearch {
 
 #### The time complexity of binary search is O(log n), where n is the length of the list. Compared to sequential search, binary lookup is more efficient in large ordered lists.
 
-## Question: Given an array of integers nums, find one of the peak elements and return its index. A peak element is an element whose value is strictly greater than the values of its left and right neighbors. There may be more than one peak in the array; simply return the index of any one peak. 
+### Q1:Suppose you are in a magical maze that is an ordered array of integers, but you don't know the exact contents of the array. Your task is to find the target value in the maze, and you can use binary search to find it as quickly as possible.Given an ordered integer array nums and a target value target, implement the function binary_search(nums, target) to return the index of the target value, or -1 if the target value does not exist in the array.
+
+### Q2: Given an array of integers nums, find one of the peak elements and return its index. A peak element is an element whose value is strictly greater than the values of its left and right neighbors. There may be more than one peak in the array; simply return the index of any one peak. 
 
 The time complexity of the binary search algorithm is calculated by the number of iterations. In each iteration, the search range is reduced by half until the target element is found or the search range is empty.
 
@@ -281,6 +283,22 @@ peak_index = find_peak_element(nums)
 # 输出结果
 print("峰值元素的索引位置为:", peak_index)
 print("峰值元素的值为:", nums[peak_index])
+```
+
+### Summary
+
+- From the above can be seen: halved search exit conditions are two, one is start than end, the second is to find the element you want to find.
+- start and end of the update logic is, when now get the element a[mid] than to find the element temp hours, update start for mid, when now get the element a[mid] than temp, update end for mid;
+- The time complexity of the half-fold lookup is O(log2n), compared to the sequential lookup, the speed of the half-fold lookup is greatly enhanced, but the half-fold lookup is only suitable for the ordered set.
+
+Hw:
+
+```
+Please find the position of the 1st occurrence of the value x in an ordered non-decreasing array (with equal values in the array), using bisection search, and output -1 if x does not exist.
+
+Please note: This question asks for q x's and the position of the first occurrence of each x in the array.
+
+For example, if there are 6 numbers, which are: 1 2 2 2 2 3 3, then if you ask for 3 numbers: 3 2 5, the position of the first occurrence in the array, the answer is: 5 2 -1
 ```
 
 
