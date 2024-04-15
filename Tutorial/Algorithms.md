@@ -191,7 +191,7 @@ Therefore, the time complexity of the bisection finding algorithm is O(log n), w
 
 - #### Repeat the second step until all elements are sorted.
 
-<img src="C:\Users\89157\Desktop\Selection_sort.gif" alt="SelectionSort"  />
+https://![sss](https://github.com/madfrov/PythonPPTs/blob/main/img/Selection_sort.gif)github.com/madfrov/PythonPPTs/blob/main/img/Selection_sort.gif
 
 ```\
 def selection_sort(arr):
@@ -255,7 +255,7 @@ print("Sorted Array is:", sorted_arr)
 
 - #### Scan the unsorted sequence from beginning to end, and insert each scanned element into an appropriate position in the ordered sequence. (If the element to be inserted is equal to an element in the ordered sequence, insert the element to be inserted after the equal element.)
 
-![Insertion_sorted](C:\Users\89157\Desktop\Insertion_sort.gif)
+![ii](https://github.com/madfrov/PythonPPTs/blob/main/img/Insertion_sort.gif)
 
 ```
 def insertion_sort(arr):
