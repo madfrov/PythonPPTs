@@ -16,6 +16,8 @@
 
 First, element 7 is compared to the first element 10 in the list and found not to be.
 
+![a](https://github.com/madfrov/PythonPPTs/blob/main/img/s1.png)
+
 Element 7 continues to be compared with the second element 5 and is found to be also not our target
 
 Element 7 continues to move backward, comparing it to the third element in the list, and is found to be the element we are looking for.
