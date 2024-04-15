@@ -56,6 +56,20 @@ else:
 
 #### The time complexity of the sequential search algorithm is O(n), where n is the length of the list. In the worst case, the entire list needs to be searched to determine the location of the target element.
 
+# Here's a exercise, write a function that includes all the students in our class as well as your name, the names are arranged in a list according to your class number, find out where your name is in the list
+
+```
+def findMyself(students,name)
+    for i in range(len(students)):
+        if students[i]==name;
+            return i
+    return -1
+com3=[arraon,andy,sally]
+print(findMyself(com3,sally))
+```
+
+
+
 ```
 import java.util.Scanner;
 
