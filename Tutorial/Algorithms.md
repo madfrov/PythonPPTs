@@ -12,6 +12,18 @@
   If the desired element is found, the location of the element is returned;
   If the desired element is not found by traversing the entire data structure, the search fails.
 
+### In the following example, find element 7 in the list [10,5,7,14,20].
+
+First, element 7 is compared to the first element 10 in the list and found not to be.
+
+Element 7 continues to be compared with the second element 5 and is found to be also not our target
+
+Element 7 continues to move backward, comparing it to the third element in the list, and is found to be the element we are looking for.
+
+After finding, the logical position of the output element in the list is 3, because the array starts from 0, so the real position of 7 is 2, the logical position needs to be added 1.
+
+From the above example, we can see that the time efficiency of the sequential search is O (n), that is, if in 10 million data lists, to find an element, his worst effect is to find all the elements once.
+
 ```
 def sequential_search(arr, target):
     for i in range(len(arr)):
