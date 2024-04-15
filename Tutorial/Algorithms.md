@@ -60,12 +60,9 @@ else:
 
 ```
 def findMyself(students,name)
-    for i in range(len(students)):
-        if students[i]==name;
-            return i
-    return -1
-com3=[arraon,andy,sally]
-print(findMyself(com3,sally))
+
+com3=
+print()
 ```
 
 
