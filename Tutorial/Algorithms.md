@@ -148,18 +148,18 @@ start is updated to mid, at this time the start is 2, end is 4, according to mid
 
 ```
 def binary_search(arr, target):
-    low = 0
-    high = len(arr) - 1
+    left = 0
+    right = len(arr) - 1
     
-    while low <= high:
-        mid = (low + high) // 2
+    while left <= right:
+        mid = (left + right) // 2
         
         if arr[mid] == target:
             return mid  # find the target element and return the index
         elif arr[mid] < target:
-            low = mid + 1  # 目标元素在右侧，缩小搜索范围到右半部分
+            left = mid + 1  # 目标元素在右侧，缩小搜索范围到右半部分
         else:
-            high = mid - 1  # 目标元素在左侧，缩小搜索范围到左半部分
+            right = mid - 1  # 目标元素在左侧，缩小搜索范围到左半部分
     
     return -1  # 没有找到目标元素，返回-1
 
@@ -350,6 +350,37 @@ Please find the position of the 1st occurrence of the value x in an ordered non-
 Please note: This question asks for q x's and the position of the first occurrence of each x in the array.
 
 For example, if there are 6 numbers, which are: 1 2 2 2 2 3 3, then if you ask for 3 numbers: 3 2 5, the position of the first occurrence in the array, the answer is: 5 2 -1
+```
+
+```
+def find_first_occurrence(nums, target):
+    left = 0
+    right = len(nums) - 1
+    position = -1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if nums[mid] == target:
+            position = mid
+            right = mid - 1
+        elif nums[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return position
+
+# Example data
+nums = [1, 2, 2, 2, 2, 3, 3]
+values = [3, 2, 5]
+
+# Find the first occurrence of each value in the array
+positions = [find_first_occurrence(nums, x) for x in values]
+
+# Output results
+for i, x in enumerate(values):
+    print(f"The position of the first occurrence of {x} is: {positions[i]}")
 ```
 
 
