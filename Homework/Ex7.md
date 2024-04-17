@@ -25,5 +25,8 @@
 
 
 #### Q5: Given an array of integers nums, find one of the peak elements and return its index. A peak element is an element whose value is strictly greater than the values of its left and right neighbors. There may be more than one peak in the array; simply return the index of any one peak.
-
 for example I have a list [0,3,5,2,1] the peak number should be 5
+
+#### Q6: Please find the position of the 1st occurrence of the value x in an ordered non-decreasing array (with equal values in the array), using bisection search, and output -1 if x does not exist. Please note: This question asks for q x's and the position of the first occurrence of each x in the array. For example, if there are 6 numbers, which are: 1 2 2 2 2 3 3, then if you ask for 3 numbers: 3 2 5, the position of the first occurrence in the array, the answer is: 5 2 -1
+
+
