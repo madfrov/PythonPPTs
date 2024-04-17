@@ -1,6 +1,4 @@
-# Exercise 5
-
-# List
+# Exercise 7
 
 #### Q1: Given a list, move all zeros to the end of the elements while maintaining the relative order of the non-zero elements. For example, input list: [0, 1, 0, 3, 12] the return data should be: [1, 3, 12, 0, 0]Complete the function below for the above intention.
 
