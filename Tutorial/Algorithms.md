@@ -446,12 +446,17 @@ print("Sorted Array is:", sorted_arr)
 ```
 
 - The time complexity of selection sort is O(n^2), where n is the length of the list. This is because in each iteration, selection sort needs to find the smallest element in the unsorted part and place it at the end of the sorted part. For each element of the list, a comparison operation is needed to find the smallest element, so n-1 comparisons are needed. After each comparison, a swap operation is also required to place the smallest element in the correct position.
-
 - In selection sort, each iteration reduces the number of elements in the unsorted part by 1, so a total of n-1 iterations are required. In each iteration, n-1 comparisons and at most 1 swap operation are performed. Therefore, the total number of comparisons and swaps for selection sort is (n-1) + (n-2) + ... + 1 = n(n-1)/2, or O(n^2).
-
 - Note that the time complexity of selection sort is always O(n^2), regardless of the initial order of the input list. Even if the list is already partially ordered, selection sort still requires the same number of compare and swap operations.
-
 - The advantage of selection sort is that it is simple to implement and requires no extra space, but it has a high time complexity and is less efficient on large lists. For smaller lists or for educational purposes, selection sort is a simple and intuitive choice.
+
+#### Question:You are given two arrays, arr1 and arr2, where the elements in arr2 are distinct and every element in arr2 appears in arr1.Sort the elements in arr1 so that the relative order of the items in arr1 is the same as the relative order in arr2. Elements that do not appear in arr2 are placed at the end of arr1 in ascending order.
+
+#### Example 1:
+Input: arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 = [2,1,4,3,9,6]
+Output: [2,2,2,1,4,3,3,9,6,7,19]    Can you do it with selection sort?
+
+
 
 ### 2. Insertion Sort
 
