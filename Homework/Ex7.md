@@ -33,3 +33,9 @@ for example I have a list [0,3,5,2,1] the peak number should be 5
 Remember return should be arr1 we can not draw a new list
 Example 1:
 Input: arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 = [2,1,4,3,9,6] Output: [2,2,2,1,4,3,3,9,6,7,19] Can you do it with selection sort?
+
+#### Q8：Given an array, the numbers in the array are sorted in ascending order based on the largest factor of the numbers in the array (excluding the numbers themselves) or the numbers themselves if they are prime. If the largest factors of the numbers are equal, the numbers themselves are sorted in comparative order according to their size.
+
+Example:
+Input: [3, 5, 21, 7]
+Output: [3, 5, 7, 21]
