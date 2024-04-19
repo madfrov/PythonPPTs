@@ -29,4 +29,7 @@ for example I have a list [0,3,5,2,1] the peak number should be 5
 
 #### Q6: Please find the position of the 1st occurrence of the value x in an ordered non-decreasing array (with equal values in the array), using bisection search, and output -1 if x does not exist. Please note: This question asks for q x's and the position of the first occurrence of each x in the array. For example, if there are 6 numbers, which are: 1 2 2 2 2 3 3, then if you ask for 3 numbers: 3 2 5, the position of the first occurrence in the array, the answer is: 5 2 -1
 
-
+#### Q7:You are given two arrays, arr1 and arr2, where the elements in arr2 are distinct and every element in arr2 appears in arr1.Sort the elements in arr1 so that the relative order of the items in arr1 is the same as the relative order in arr2. Elements that do not appear in arr2 are placed at the end of arr1 in ascending order.
+Remember return should be arr1 we can not draw a new list
+Example 1:
+Input: arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 = [2,1,4,3,9,6] Output: [2,2,2,1,4,3,3,9,6,7,19] Can you do it with selection sort?
