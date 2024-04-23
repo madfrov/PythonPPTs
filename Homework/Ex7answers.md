@@ -150,3 +150,47 @@ result = relativeSortArray(arr1, arr2)
 print(result)
 ```
 
+Q8
+
+```
+
+def maxFactorSort(nums):
+    def get_max_factor(num):
+        # 获取一个数的最大因数（非本身）
+        if num < 2:
+            return num
+        for i in range(2, int(num/2) + 1):
+            if num % i == 0:
+                return num // i
+        return num
+    
+    n = len(nums)
+    
+    # 选择排序
+    for i in range(n):
+        min_factor = nums[i]
+        min_index = i
+        
+        # 在剩余的元素中找到最大因数最小的元素
+        for j in range(i + 1, n):
+            if get_max_factor(nums[j]) < get_max_factor(min_factor):
+                min_factor = nums[j]
+                min_index = j
+            elif get_max_factor(nums[j]) == get_max_factor(min_factor):
+                if nums[j] < min_factor:
+                    min_factor = nums[j]
+                    min_index = j
+        
+        # 交换当前位置和最大因数最小元素的位置
+        nums[i], nums[min_index] = nums[min_index], nums[i]
+    
+    return nums
+
+
+# 测试
+nums = [3, 5, 21, 7]
+
+# 根据最大因数进行选择排序（升序），当最大公约数相等时，根据本身大小排序
+result = maxFactorSort(nums)
+print(result)
+```
