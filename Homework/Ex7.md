@@ -39,3 +39,5 @@ Input: arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 = [2,1,4,3,9,6] Output: [2,2,2,1,4,
 Example:
 Input: [3, 5, 21, 7]
 Output: [3, 5, 7, 21]
+
+#### Q9:Using Recursion to write the selection sort
