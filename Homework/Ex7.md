@@ -40,4 +40,4 @@ Example:
 Input: [3, 5, 21, 7]
 Output: [3, 5, 7, 21]
 
-#### Q9:Using Recursion to write the selection sort
+#### Q9: Using Recursion to write the selection sort
