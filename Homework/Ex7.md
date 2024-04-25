@@ -32,12 +32,12 @@ for example I have a list [0,3,5,2,1] the peak number should be 5
 #### Q7:You are given two arrays, arr1 and arr2, where the elements in arr2 are distinct and every element in arr2 appears in arr1.Sort the elements in arr1 so that the relative order of the items in arr1 is the same as the relative order in arr2. Elements that do not appear in arr2 are placed at the end of arr1 in ascending order.
 Remember return should be arr1 we can not draw a new list
 Example 1:
-Input: arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 = [2,1,4,3,9,6] Output: [2,2,2,1,4,3,3,9,6,7,19] Can you do it with selection sort?
+Input: arr1 = [5,6,4,4,3,3,2,2,1,1], arr2 = [1,2,3,4] Output: [1,1,2,2,3,3,4,4,5,6] Can you do it with selection sort?
 
 #### Q8：Given an array, the numbers in the array are sorted in ascending order based on the largest factor of the numbers in the array (excluding the numbers themselves) or the numbers themselves if they are prime. If the largest factors of the numbers are equal, the numbers themselves are sorted in comparative order according to their size.（selection sort）
 
 Example:
-Input: [3, 5, 21, 7]
-Output: [3, 5, 7, 21]
+Input: [3,15,5,21,25,7]
+Output: [3,5,15,25,7,21]
 
 #### Q9: Using Recursion to write the selection sort
