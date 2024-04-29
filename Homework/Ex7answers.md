@@ -132,6 +132,7 @@ print([find_first(arr,x)for x in target])
 Q7
 
 ```
+#By G1-3 Andy Chen
 def relativeSortArray(arr1, arr2):
     for i in range(len(arr1)):
         min_index = i
@@ -149,7 +150,55 @@ arr2 = [6,3,4,2]
 result = relativeSortArray(arr1, arr2)
 print(result)
 ```
+```
+import java.util.ArrayList;
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+//        ArrayList<Integer> arr1 = new ArrayList<Integer>();
+//        for(int i = 0; i<10; i++){
+//            arr1.add((int)(Math.random()*100));
+//        }
+//        System.out.println(arr1);
+//        for(int i = 0; i<arr1.size()-1; i++){
+//            int j=i;
+//            while (j>0){
+//                if (arr1.get(j-1)>arr1.get(j)){
+//                    int a = arr1.get(j-1);
+//                    int b = arr1.get(j);
+//                    arr1.set(j,a);
+//                    arr1.set(j-1,b);
+//                    j--;
+//                }
+//                else {
+//                    break;
+//                }
+//            }
+//        }
+//        System.out.println(arr1);
 
+
+        ArrayList<Integer> arr1 = new ArrayList<Integer>(Arrays.asList(1,1,2,2,3,2));
+        ArrayList<Integer> arr2 = new ArrayList<Integer>(Arrays.asList(3,2,1));
+        int k = 0;
+        for (int i = 0; i<arr2.size(); i++){
+            for (int j = k; j<arr1.size(); j++){
+                if (arr1.get(j)==arr2.get(i)){
+                    int wala= arr1.get(j);
+                    arr1.remove(j);
+                    arr1.add(k,wala);
+                    k++;
+                }
+            }
+        }
+        for (int i = 0; i<arr2.size()-k; i++){
+            arr1.add(arr1.get(0));
+            arr1.remove(0);
+        }
+        System.out.println(arr1);
+    }
+}
+```
 Q8
 
 ```
