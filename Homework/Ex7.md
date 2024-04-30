@@ -41,3 +41,13 @@ Input: [3,15,5,21,25,7]
 Output: [3,5,15,25,7,21]
 
 #### Q9: Using Recursion to write the selection sort
+
+###  Q10：Find the kth smallest integer in a list
+
+### Given a list of integers, write an algorithm to find the kth smallest integer in the list.Using Selection or Insertion sort
+
+Input: a list of integers and the kth smallest integer to be found.
+Output: kth smallest integer in the list.
+Example:
+Input: [5, 5，6，7，1，1，2，2, 9, 1, 7], k = 3
+Output: The 3rd smallest integer is 5.
