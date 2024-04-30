@@ -42,9 +42,9 @@ Output: [3,5,15,25,7,21]
 
 #### Q9: Using Recursion to write the selection sort
 
-###  Q10：Find the kth smallest integer in a list
+####  Q10：Find the kth smallest integer in a list
 
-### Given a list of integers, write an algorithm to find the kth smallest integer in the list.Using Selection or Insertion sort
+#### Given a list of integers, write an algorithm to find the kth smallest integer in the list.Using Selection or Insertion sort
 
 Input: a list of integers and the kth smallest integer to be found.
 Output: kth smallest integer in the list.
