@@ -132,7 +132,7 @@ print([find_first(arr,x)for x in target])
 Q7
 
 ```
-#By G1-3 Andy Chen
+#
 def relativeSortArray(arr1, arr2):
     for i in range(len(arr1)):
         min_index = i
@@ -151,6 +151,7 @@ result = relativeSortArray(arr1, arr2)
 print(result)
 ```
 ```
+By G1-3 Andy Chen
 import java.util.ArrayList;
 import java.util.Arrays;
 public class Main {
