@@ -226,7 +226,7 @@ public class Main {
 Q8
 
 ```
-
+#by Selection sort
 def maxFactorSort(nums):
     def get_max_factor(num):
         # 获取一个数的最大因数（非本身）
@@ -261,9 +261,44 @@ def maxFactorSort(nums):
 
 
 # 测试
-nums = [3, 5, 21, 7]
+nums = [5, 3, 15,21, 7]
 
 # 根据最大因数进行选择排序（升序），当最大公约数相等时，根据本身大小排序
+result = maxFactorSort(nums)
+print(result)
+```
+```
+#By Insertion Sort
+def maxFactorSort(nums):
+    def get_max_factor(num):
+        # 获取一个数的最大因数（非本身）
+        if num < 2:
+            return num
+        for i in range(2, int(num/2) + 1):
+            if num % i == 0:
+                return num // i
+        return num
+    
+    n = len(nums)
+    
+    # 插入排序
+    for i in range(1, n):
+        key = nums[i]
+        j = i - 1
+        
+        while j >= 0 and (get_max_factor(nums[j]) > get_max_factor(key) or (get_max_factor(nums[j]) == get_max_factor(key) and nums[j] > key)):
+            nums[j+1] = nums[j]
+            j -= 1
+        
+        nums[j+1] = key
+    
+    return nums
+
+
+# 测试
+nums = [5, 3,15, 21, 7]
+
+# 根据最大因数进行插入排序（升序），当最大因数相等时，根据本身大小排序
 result = maxFactorSort(nums)
 print(result)
 ```
