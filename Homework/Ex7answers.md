@@ -132,7 +132,7 @@ print([find_first(arr,x)for x in target])
 Q7
 
 ```
-#
+#Selection sort
 def relativeSortArray(arr1, arr2):
     for i in range(len(arr1)):
         min_index = i
@@ -147,6 +147,29 @@ def relativeSortArray(arr1, arr2):
     return arr1
 arr1 = [3,4,2,5,4,4,6]
 arr2 = [6,3,4,2]
+result = relativeSortArray(arr1, arr2)
+print(result)
+```
+```
+#Insertion Sort
+def relativeSortArray(arr1, arr2):
+    for i in range(1, len(arr1)):
+        key = arr1[i]
+        j = i - 1
+
+        # 在arr2中找到key的索引，如果key不在arr2中，则返回len(arr2)
+        index_key = arr2.index(key) if key in arr2 else len(arr2)
+
+        while j >= 0 and (arr2.index(arr1[j]) if arr1[j] in arr2 else len(arr2)) > index_key:
+            arr1[j+1] = arr1[j]
+            j -= 1
+
+        arr1[j+1] = key
+
+    return arr1
+
+arr1 = [3, 4, 2, 5, 4, 4, 6]
+arr2 = [6, 3, 4, 2]
 result = relativeSortArray(arr1, arr2)
 print(result)
 ```
